@@ -9,10 +9,12 @@ public class Balloon : MonoBehaviour
     public int clickToPop = 3;
 
     public float scaleToIncrease = 0.10f;
+
+    public ScoreManager scoreManager;
     // Start is called before the first frame update
     void Start()
     {
-        
+        scoreManager = GameObject.Find
     }
 
     // Update is called once per frame
@@ -27,5 +29,11 @@ public class Balloon : MonoBehaviour
         clickToPop -= 1;
         
         transform.localScale += Vector3.one * scaleToIncrease;
+
+        if(clickToPop == 0)
+        {
+            scoreManager.IncreaseScoreText(scoreToGive);
+            Destroy(gameObject);
+        }
     }
 }
