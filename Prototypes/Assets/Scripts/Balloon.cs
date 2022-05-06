@@ -14,7 +14,7 @@ public class Balloon : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        scoreManager = GameObject.Find
+   
     }
 
     // Update is called once per frame
